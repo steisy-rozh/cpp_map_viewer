@@ -1,0 +1,1 @@
+Map viewer - cpp map that is created by cpp code and showed by various C# frameworks: from Windows Form to MAUI + implemetation on Qt

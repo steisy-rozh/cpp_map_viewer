@@ -1,0 +1,1 @@
+Small python script was created to prepare map tiles in different sizes and qualities
