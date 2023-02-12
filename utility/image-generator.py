@@ -31,8 +31,11 @@ class MyImage :
             yield MyImage(img, self.type)
 
     def save(self, name: str, qual: int = 100):
+        print(f'target quality is {qual}')
+
         if 1 > qual or qual > 100:
             raise InvalidQualityException
+
         self.im.save(f"{name}.{self.type}", quality=qual)
 
 
@@ -48,11 +51,11 @@ def main():
     imagename = sys.argv[1]
     count = int(sys.argv[2])
 
-    quality = 100 if count^2 > 100 else count^2
+    quality = 100 if count**2 > 100 else count**2
 
     directory_name = f'images_{count}'
 
-    if os.path.exists(directory_name) == False:
+    if not os.path.exists(directory_name):
         os.mkdir(directory_name)
 
     try:
